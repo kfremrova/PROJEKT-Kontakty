@@ -29,4 +29,41 @@ body {
 	border-radius: 10px;
 	padding: 10px;
 	margin: 10px;
+	box-shadow: 1px 1px 2px 0 lightblue;
 }
+
+@media screen and (min-width:540px) {
+	.kontakty {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.box {
+		width: calc((100% - 40px) / 2); /*tj. na jeden kontakt vyjde polovina z šířky celku po odečtení všech marginů*/
+		display: flex;
+		text-align: left;
+	}
+
+	.box img {
+		flex: 0 0 100px;
+		margin-right: 10px;
+		height: 100px;
+	}
+}
+
+@media screen and (min-width:960px) {
+	.box {
+		width: calc((100% - 80px) / 4); /*tj 2*10px*4 marginů odečteno od 100% šířky děleno 4 boxíky*/
+		display: block;
+		text-align: center;
+	}
+
+	.box img {
+		margin-right: 0;
+		width: 128px;
+		height: 128px;
+	}
+	
+
+}
+
